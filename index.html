@@ -8,43 +8,55 @@
 </head>
 <body>
   <header>
+    <div class="bandeiras">
+    <img src="imagem5.png" alt="Português" width="40" onclick="mudarIdioma('pt')" style="cursor: pointer;">
+    <img src="imagem6.jpg" alt="Inglês" width="40" onclick="mudarIdioma('en')" style="cursor: pointer;">
+  </div>
+  
+    <button onclick="toggleMode()">🌗</button>
+
     <div class="container">
       <img src="Imagem WhatsApp 2025-04-23 às 20.03.58_36d3e6c4.jpg" alt="Luís Casado" class="profile-img" />
-      <h1>Luís Casado</h1>
-      <p>Estudante de Engenharia Informática</p>
-      <p>Universidade Portucalense</p>
-      <p class="cidade">Mogadouro, Portugal</p>
-      <a href="#contato" class="btn-cta">Fala comigo</a>
+      <h1 id="nome">Luís Casado</h1>
+      <p id="descricao">Estudante de Engenharia Informática</p>
+      <p id="universidade">Universidade Portucalense</p>
+      <p class="cidade" id="cidade">Mogadouro, Portugal</p>
+      <a href="#contato" class="btn-cta" id="btn-cta">Fala comigo</a>
     </div>
 
     <div class="social-icons">
-        <a href="https://github.com/" target="_blank" class="social-btn github"><img src="image.png" alt="GitHub" class="icon-img" />GitHub</a>
-        <a href="https://www.linkedin.com/in/luis-casado-6b2726211/" target="_blank" class="social-btn linkedin"><img src="imagem1.png" alt="LinkedIn" class="icon1-img" />LinkedIn</a> 
+      <a href="https://github.com/" target="_blank" class="social-btn github">
+        <img src="image.png" alt="GitHub" class="icon-img" />GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/luis-casado-6b2726211/" target="_blank" class="social-btn linkedin">
+        <img src="imagem1.png" alt="LinkedIn" class="icon1-img" />LinkedIn
+      </a>
     </div>
   </header>
 
   <nav>
     <ul>
-      <li><a href="#sobre">Sobre Mim</a></li>
-      <li><a href="#habilidades">Habilidades</a></li>
-      <li><a href="#projetos">Projetos</a></li>
-      <li><a href="#contato">Contato</a></li>
+      <li><a href="#sobre" id="link-sobre">Sobre Mim</a></li>
+      <li><a href="#habilidades" id="link-habilidades">Habilidades</a></li>
+      <li><a href="#projetos" id="link-projetos">Projetos</a></li>
+      <li><a href="#contato" id="link-contato">Contato</a></li>
     </ul>
   </nav>
 
   <main>
     <section id="sobre">
-      <h2>Sobre Mim</h2>
-      <p>Oriundo da região de Trás-os-Montes, nutro um profundo apreço pelas minhas raízes, pela serenidade do ambiente rural e pelos valores que me foram incutidos desde cedo. A ligação à terra é uma constante na minha vida — nos fins de semana, dedico-me com entusiasmo à atividade agrícola em colaboração com a minha família, o que não só reforça os laços afetivos, como também me proporciona um sentido de propósito e pertença. Aprecio profundamente o funcionamento e a estética de maquinaria como tratores, automóveis e, em particular, motociclos, cuja mecânica e liberdade simbolizam, para mim, uma forma de expressão pessoal.</p>
-        <br>
-      <p>Paralelamente, sou um entusiasta inveterado do desporto, com especial predileção pelo futebol, o que complementa o meu estilo de vida ativo e resiliente. A gastronomia transmontana ocupa igualmente um lugar privilegiado nos meus interesses, pela sua autenticidade, riqueza de sabores e forte ligação cultural. Estes elementos constituem pilares fundamentais da minha identidade pessoal e reforçam a minha valorização pela tradição e pelas vivências genuínas do interior português.</p>
+      <h2 id="sobre-titulo">Sobre Mim</h2>
+      <p id="sobre-texto1">
+        Oriundo da região de Trás-os-Montes, nutro um profundo apreço pelas minhas raízes, pela serenidade do ambiente rural e pelos valores que me foram incutidos desde cedo. A ligação à terra é uma constante na minha vida — nos fins de semana, dedico-me com entusiasmo à atividade agrícola em colaboração com a minha família, o que não só reforça os laços afetivos, como também me proporciona um sentido de propósito e pertença. Aprecio profundamente o funcionamento e a estética de maquinaria como tratores, automóveis e, em particular, motociclos, cuja mecânica e liberdade simbolizam, para mim, uma forma de expressão pessoal.
+      </p>
       <br>
-      <p>Atualmente, resido na cidade do Porto, onde frequento a licenciatura em Engenharia Informática na Universidade Portucalense Infante Dom Henrique. Embora reconheça o dinamismo urbano como oportunidade de crescimento académico e profissional, é na tranquilidade do meio rural que encontro o verdadeiro equilíbrio. O meu percurso académico reflete o compromisso com a excelência, o rigor técnico e a vontade incessante de evoluir no domínio da tecnologia e do desenvolvimento digital.</p>
-
+      <p id="sobre-texto2">
+        Atualmente, resido na cidade do Porto, onde frequento a licenciatura em Engenharia Informática na Universidade Portucalense Infante Dom Henrique. Embora reconheça o dinamismo urbano como oportunidade de crescimento académico e profissional, é na tranquilidade do meio rural que encontro o verdadeiro equilíbrio. O meu percurso académico reflete o compromisso com a excelência, o rigor técnico e a vontade incessante de evoluir no domínio da tecnologia e do desenvolvimento digital.
+      </p>
     </section>
 
     <section id="habilidades">
-      <h2>Habilidades</h2>
+      <h2 id="habilidades-titulo">Habilidades</h2>
       <ul class="skills">
         <li>JAVASCRIPT</li>
         <li>PYTHON</li>
@@ -60,53 +72,65 @@
         <li>BLUEJ</li>
         <li>VISUAL STUDIO</li>
         <li>COMUNICAÇÃO CLARA</li>
-        <li>PENSAMENTO CRITICO</li>
+        <li>PENSAMENTO CRÍTICO</li>
         <li>TRABALHO EM EQUIPE</li>
         <li>METODOLOGIAS ÁGEIS (SCRUM)</li>
-
       </ul>
     </section>
 
     <section id="projetos">
-        <h2>Projetos Académicos</h2>
-      
-        <div class="projeto">
-          <h3>🔌 Configuração de Rede Empresarial</h3>
-          <p><strong>Disciplina:</strong> Redes de Computadores</p>
-          <p>Desenvolvimento de um ambiente de rede corporativo, incorporando segmentação por VLANs, configuração de IPs estáticos e dinâmicos (via DHCP), bem como a aplicação de mecanismos de controlo de acessos. Este projeto proporcionou uma experiência sólida na implementação de soluções de conectividade e segurança em redes locais.</p>
-        </div>
-        <br>
-
-        <div class="projeto">
-          <h3>♻️ Plataforma para Combate ao Desperdício Alimentar</h3>
-          <p><strong>Disciplinas:</strong> Programação Orientada a Objetos e Sistemas de Informação</p>
-          <p>Conceção e execução de uma aplicação Java, inspirada na iniciativa <em>Too Good To Go</em>, com o propósito de promover a sustentabilidade alimentar. Através da metodologia ágil, foram elaboradas User Stories, definido o Product Backlog e estruturado o sistema com base em princípios de Programação Orientada a Objetos. O projeto integrou ainda versionamento de código com GitHub e boas práticas de engenharia de software.</p>
-        </div>
-        <br>
-        <div class="projeto">
-          <h3>📚 Sistema de Gestão de Biblioteca</h3>
-          <p><strong>Disciplina:</strong> Laboratório de Programação</p>
-          <p>Criação de uma solução completa de gestão bibliotecária, desenvolvida em Java, com integração de base de dados SQL, comunicação por API REST e interface gráfica. A abordagem adotada assentou em metodologias ágeis, permitindo um desenvolvimento iterativo, com foco na robustez da solução e na usabilidade.</p>
-        </div>
-        <br>
-        <div class="projeto">
-          <h3>⛽ Sistema de Gestão de Posto de Combustível <em>(Em Desenvolvimento)</em></h3>
-          <p><strong>Disciplina:</strong> Laboratório de Tecnologias WEB, Compiladores e Engenharia de software</p>
-          <p>Projeto em curso centrado na conceção de um sistema para administração de um posto de combustivel. Inclui funcionalidades como gestão de stocks, faturação, histórico de transações e controlo de clientes. Este trabalho reflete uma abordagem abrangente à engenharia de software, desde a modelação de requisitos até à implementação funcional.</p>
-        </div>
-        <br>
-        <div class="projeto">
-            <h3>🐟 Sistema de Base de Dados para Gestão da Atividade Piscatória</h3>
-            <p><strong>Disciplina:</strong> Bases de Dados</p>
-            <p>Desenvolvimento de uma base de dados relacional orientada à gestão do setor da pesca, contemplando entidades como armadores, barcos, técnicas de pesca, registos de saídas para o mar e capturas efetuadas. O projeto envolve a conceção do modelo entidade-relacionamento, normalização até à 3ª forma normal e implementação em SQL, assegurando integridade referencial e eficiência na consulta e gestão da informação.</p>
-          </div>
-          
-      </section>
-      
+      <h2 id="projetos-titulo">Projetos Académicos</h2>
+    
+      <div class="projeto">
+        <h3 id="projeto1-titulo">🔌 Configuração de Rede Empresarial</h3>
+        <p><strong id="projeto1-disciplina">Disciplina:</strong> <span id="projeto1-disciplina-nome">Redes de Computadores</span></p>
+        <p id="projeto1-desc">Desenvolvimento de um ambiente de rede corporativo, incorporando segmentação por VLANs, configuração de IPs estáticos e dinâmicos (via DHCP), bem como a aplicação de mecanismos de controlo de acessos.</p>
+      </div>
+    
+      <div class="projeto">
+        <h3 id="projeto2-titulo">♻️ Plataforma para Combate ao Desperdício Alimentar</h3>
+        <p><strong id="projeto2-disciplinas">Disciplinas:</strong> <span id="projeto2-disciplina-nome">Programação Orientada a Objetos e Sistemas de Informação</span></p>
+        <p id="projeto2-desc">Conceção e execução de uma aplicação Java, inspirada na iniciativa Too Good To Go, com foco na sustentabilidade alimentar e boas práticas de engenharia de software.</p>
+      </div>
+    
+      <div class="projeto">
+        <h3 id="projeto3-titulo">📚 Sistema de Gestão de Biblioteca</h3>
+        <p><strong id="projeto3-disciplina">Disciplina:</strong> <span id="projeto3-disciplina-nome">Laboratório de Programação</span></p>
+        <p id="projeto3-desc">Criação de uma solução completa em Java com base de dados SQL, comunicação via API REST e interface gráfica.</p>
+      </div>
+    
+      <div class="projeto">
+        <h3 id="projeto4-titulo">⛽ Sistema de Gestão de Posto de Combustível (Em Desenvolvimento)</h3>
+        <p><strong id="projeto4-disciplinas">Disciplinas:</strong> <span id="projeto4-disciplina-nome">Laboratório de Tecnologias WEB, Compiladores e Engenharia de Software</span></p>
+        <p id="projeto4-desc">Conceção de sistema de gestão com funcionalidades completas: stocks, faturação, controlo de clientes.</p>
+      </div>
+    
+      <div class="projeto">
+        <h3 id="projeto5-titulo">🐟 Sistema de Base de Dados para Atividade Piscatória</h3>
+        <p><strong id="projeto5-disciplina">Disciplina:</strong> <span id="projeto5-disciplina-nome">Bases de Dados</span></p>
+        <p id="projeto5-desc">Base de dados relacional completa para gestão do setor da pesca, com normalização até 3FN.</p>
+      </div>
+    
+      <div class="projeto">
+        <h3 id="projeto6-titulo">🔧 Aplicação Web para Gestão de Posto de Combustível</h3>
+        <p><strong id="projeto6-disciplina">Disciplina:</strong> <span id="projeto6-disciplina-nome">Laboratório de Tecnologias Web</span></p>
+        <p id="projeto6-desc">Plataforma online moderna para gerir abastecimentos, vendas e stocks.</p>
+      </div>
+    
+      <div class="projeto">
+        <h3 id="projeto7-titulo">🧑‍💻 Portfólio Pessoal Interativo</h3>
+        <p><strong id="projeto7-disciplina">Disciplina:</strong> <span id="projeto7-disciplina-nome">Laboratório de Tecnologias Web</span></p>
+        <p id="projeto7-desc">Criação deste portfólio responsivo, com HTML, CSS e JavaScript.</p>
+      </div>
+    </section>
+    
 
     <section id="contato">
-      <h2>Contato</h2>
-      <p>Podes entrar em contacto comigo através do email: <a href="mailto:luisrcasado@hotmail.com">luisrcasado@hotmail.com</a></p>
+      <h2 id="contato-titulo">Contato</h2>
+<p id="contato-texto">
+  Podes entrar em contacto comigo através do email: 
+  <a href="mailto:luisrcasado@hotmail.com" id="email-link">luisrcasado@hotmail.com</a>
+</p>
     </section>
   </main>
 
@@ -114,6 +138,6 @@
     <p>&copy; 2025 Luís Casado. Todos os direitos reservados.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
