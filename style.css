@@ -378,3 +378,33 @@
   cursor: pointer; /* Mostra que é clicável */
 }
 
+.mapa-imagem-container {
+  display: flex;
+  width: 100%;
+  height: 500px; /* Podes ajustar a altura aqui conforme quiseres */
+}
+
+.mapa, .imagem {
+  flex: 1; /* Cada um ocupa metade */
+  height: 100%;
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Faz a imagem cobrir sem distorcer */
+}
+
+.mapa-imagem-container {
+  display: flex;
+  width: 100vw; /* <-- aqui usa 100% da largura visível do ecrã */
+  height: 500px;
+  margin-left: calc(-50vw + 50%); /* Para alinhar bem ao centro */
+}
+

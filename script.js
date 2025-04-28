@@ -62,6 +62,8 @@ function toggleMode() {
       mudarTexto('projeto7-disciplina-nome', 'Laboratório de Tecnologias Web');
       mudarTexto('projeto7-desc', 'Criação deste portfólio responsivo, com HTML, CSS e JavaScript.');
       mudarHTML('contato-texto', 'Podes entrar em contacto comigo através do email: <a href="mailto:luisrcasado@hotmail.com" id="email-link">luisrcasado@hotmail.com</a>');
+      mudarTexto('melhor-local', 'Vila');
+
     } 
     else if (idioma === 'en') {
       mudarTexto('nome', 'Luis Casado');
@@ -108,6 +110,7 @@ function toggleMode() {
       mudarTexto('projeto7-disciplina-nome', 'Web Technologies Laboratory');
       mudarTexto('projeto7-desc', 'Creation of this responsive portfolio using HTML, CSS, and JavaScript.');
       mudarHTML('contato-texto', 'You can contact me via email: <a href="mailto:luisrcasado@hotmail.com" id="email-link">luisrcasado@hotmail.com</a>');
+      mudarTexto('melhor-local', 'Village');
     }
   }
   
