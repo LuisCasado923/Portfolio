@@ -113,5 +113,59 @@ function toggleMode() {
       mudarTexto('melhor-local', 'Village');
     }
   }
+
+  /*-----------------------------------------------------------------------*/
+  const botToggle = document.getElementById('bot-toggle');
+const chatbox = document.getElementById('chatbox');
+const sendBtn = document.getElementById('send-btn');
+const userInput = document.getElementById('user-input');
+const chatLog = document.getElementById('chat-log');
+
+botToggle.addEventListener('click', () => {
+  chatbox.classList.toggle('hidden');
+});
+
+// Respostas fake do LuísBot
+const respostas = {
+  "olá": "Como é irmão, tudo em cima? 👋",
+  "ola": "Como é irmão, tudo em cima? 👋",
+  "entao": "Como é irmão, tudo em cima? 👋",
+  "então": "Como é irmão, tudo em cima? 👋",
+  "bom dia": "Como é irmão, tudo em cima? 👋",
+  "boa Tarde": "Como é irmão, tudo em cima? 👋",
+  "boa Noite": "Como é irmão, tudo em cima? 👋",
+  "sim": "Ainda bem amigo! 😁",
+  "e contigo?": "Também, tudo tranquilo! Obrigado. 😁",
+  "quem és tu?": "Sou o Bot! Uma Versão digital e mais inteligente do verdadeiro Luís Casado 😎",
+  "de onde és?": "Sou de Mogadouro, com orgulho hehehehehe! 🇵🇹",
+  "que linguagens usas?": "JavaScript, Python, Java... e às vezes falo transmontano técnico!",
+  "qual é o teu hobby?": "Agricultura, tratores e fazer código enquanto como alheiras.",
+  "adeus": "Até já! Vai com calma, pá 👋",
+  "xau": "Até já! Vai com calma, pá 👋",
+  "até logo": "Até já! Vai com calma, pá 👋",
+  "até já": "Até já! Vai com calma, pá 👋",
+  "já volto": "Até já! Vai com calma, pá 👋"
+};
+
+sendBtn.addEventListener('click', () => {
+  const pergunta = userInput.value.trim().toLowerCase();
+  if (!pergunta) return;
+
+  appendMensagem("Tu", pergunta);
+  userInput.value = "";
+
+  const resposta = respostas[pergunta] || "Hmm, ainda não fui programado para isso. Tenta outra! 😉";
+  setTimeout(() => {
+    appendMensagem("LuísBot", resposta);
+  }, 500);
+});
+
+function appendMensagem(remetente, mensagem) {
+  const msg = document.createElement("div");
+  msg.innerHTML = `<strong>${remetente}:</strong> ${mensagem}`;
+  chatLog.appendChild(msg);
+  chatLog.scrollTop = chatLog.scrollHeight;
+}
+
   
   
